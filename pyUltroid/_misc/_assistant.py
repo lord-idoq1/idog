@@ -91,9 +91,9 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="Ultroid Userbot",
-                        url="https://t.me/TeamUltroid",
-                        description="(c) TeamUltroid",
+                        title="Miku Userbot",
+                        url="https://t.me/idoganzzbot",
+                        description="(c) idoganz",
                         text=MSG,
                         thumb=InputWebDocument(
                             "https://graph.org/file/dde85d441fa051a0d7d1d.jpg",
@@ -127,7 +127,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/UltroidSupportChat"
+                                    "Report", "https://t.me/idoganzzbot"
                                 ),
                             )
                         ]
