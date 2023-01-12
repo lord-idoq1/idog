@@ -70,8 +70,8 @@ def ULTPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url(get_string("bot_4"), "t.me/UltroidSupportChat"),
+        Button.url(get_string("bot_3"), "https://github.com/"),
+        Button.url(get_string("bot_4"), "t.me/idostoree"),
     ]
 ]
 
@@ -84,7 +84,7 @@ The Ultroid Userbot
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Miku Version -><b> <code>{}</code>\n🌀 <b>Miku -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @idoganzzbot</b>"
+in_alive = "{}\n\n🌀 <b>Miku Version -><b> <code>{}</code>\n🌀 <b>Miku -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @idostoree</b>"
 
 
 @callback("alive")
