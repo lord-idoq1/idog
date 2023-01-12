@@ -19,7 +19,16 @@
 • `{i}vcinvite`
     Invite all members of group in Group Call.
     (You must be joined)
+
+• `{i}joinvc`
+    join Group Call in a group.
+
+• `{i}leavevc`
+    leave Group Call in a group.
+
 """
+
+import asyncio
 
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
@@ -28,7 +37,8 @@ from telethon.tl.functions.phone import EditGroupCallTitleRequest as settitle
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
-from . import get_string, ultroid_cmd
+from . import ultroid_cmd, vc_asst, owner_and_sudos, get_string, udB, inline_mention, add_to_queue, mediainfo, file_download, LOGS, is_url_ok, bash, download, Player, VC_QUEUE, list_queue, CLIENTS,VIDEO_ON, vid_download, dl_playlist
+
 
 
 async def get_call(event):
@@ -53,7 +63,6 @@ async def _(e):
         await e.eor(get_string("vct_4"))
     except Exception as ex:
         await e.eor(f"`{ex}`")
-
 
 @ultroid_cmd(
     pattern="vcinvite$",
@@ -103,3 +112,40 @@ async def _(e):
         await e.eor(get_string("vct_2").format(title))
     except Exception as ex:
         await e.eor(f"`{ex}`")
+
+vc_asst("joinvc")
+async def join_(event):
+    if len(event.text.split()) > 1:
+        chat = event.text.split()[1]
+        try:
+            chat = await event.client.parse_id(chat)
+        except Exception as e:
+            return await event.eor(get_string("vcbot_2").format(str(e)))
+    else:
+        chat = event.chat_id
+    aySongs = Player(chat, event)
+    await asyncio.sleep(1)
+    await aySongs.group_call.set_pause(False)
+    await asyncio.sleep(1)
+    await aySongs.group_call.set_pause(True)
+    if not aySongs.group_call.is_connected:
+        await aySongs.vc_joiner()
+
+
+@vc_asst("(end|leavevc)")
+async def leaver(event):
+    if len(event.text.split()) > 1:
+        chat = event.text.split()[1]
+        try:
+            chat = await event.client.parse_id(chat)
+        except Exception as e:
+            return await event.eor(get_string("vcbot_2").format(str(e)))
+    else:
+        chat = event.chat_id
+    aySongs = Player(chat)
+    await aySongs.group_call.stop()
+    if CLIENTS.get(chat):
+        del CLIENTS[chat]
+    if VIDEO_ON.get(chat):
+        del VIDEO_ON[chat]
+    await event.eor(get_string("vcbot_1"))
