@@ -353,7 +353,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="gban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gbanning...`")
+    xx = await e.eor("`otw gban...`")
     reason = ""
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
@@ -449,7 +449,7 @@ async def gcast(event):
             event, "`Give some text to Globally Broadcast or reply a message..`"
         )
 
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("`Sedang mengirim Pesan Broadcast..`")
     er = 0
     done = 0
     err = ""
