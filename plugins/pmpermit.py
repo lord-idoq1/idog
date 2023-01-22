@@ -7,10 +7,10 @@
 """
 ✘ Commands Available -
 
-• `{i}a` or `{i}approve`
+• `{i}ok` or `{i}approve`
     Approve someone to PM.
 
-• `{i}da` or `{i}disapprove`
+• `{i}tolak` or `{i}disapprove`
     Disapprove someone to PM.
 
 • `{i}block`
@@ -84,9 +84,9 @@ if udB.get_key("PM_TEXT"):
 # 1
 WARNS = udB.get_key("PMWARNS") or 4
 PMCMDS = [
-    f"{HNDLR}a",
+    f"{HNDLR}ok",
     f"{HNDLR}approve",
-    f"{HNDLR}da",
+    f"{HNDLR}tolak",
     f"{HNDLR}disapprove",
     f"{HNDLR}block",
     f"{HNDLR}unblock",
@@ -394,7 +394,7 @@ if udB.get_key("PMSETTING"):
             except Exception as mm:
                 await e.eor(str(mm), time=5)
 
-    @ultroid_cmd(pattern="(a|approve)(?: |$)", fullsudo=True)
+    @ultroid_cmd(pattern="(ok|approve)(?: |$)", fullsudo=True)
     async def approvepm(apprvpm):
         if apprvpm.reply_to_msg_id:
             user = (await apprvpm.get_reply_message()).sender
@@ -445,7 +445,7 @@ if udB.get_key("PMSETTING"):
         else:
             await apprvpm.eor("`User may already be approved.`", time=5)
 
-    @ultroid_cmd(pattern="(da|disapprove)(?: |$)", fullsudo=True)
+    @ultroid_cmd(pattern="(tolak|disapprove)(?: |$)", fullsudo=True)
     async def disapprovepm(e):
         if e.reply_to_msg_id:
             user = (await e.get_reply_message()).sender
