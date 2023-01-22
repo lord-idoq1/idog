@@ -150,12 +150,12 @@ afk_5: "`AFK dulu.`\n\n**Karena:** `{}`"
 afk_6: "Dadah Gua AFK dulu."
 
 # bot
-bot_1: "Status: Ultra-Premium [Developer]"
+bot_1: "Status: Ultra-premium [Developer]"
 bot_2: "Stats"
 bot_3: "Repo"
 bot_4: "Support"
 bot_5: "`Merestart ulang...`"
-alive_1: "**Miku Userbot...**\n\nOwner - `{}`\nExpired - Unlimited\nUpTime** - `{}`\n"
+alive_1: "**MikuUbot**\n**{}**\n\n**User** - `{}`\n**Expired_on** - `24.03.2060`\n**miku_uptime** - `{}`\n**Python** - `{}`\n**Developer** - `@punyaceel`"
 log: "**Heroku** Miku ubot Logs.\nPasted [here]({}) too!"
 ping: "**Pong !!** `{}ms`\n**Uptime** - `{}`"
 usage: "**⚙️ Informasi Dyno ⚙️**:\n\n➠ **Penggunaan Dyno** `{}`:\n  •  **{}h**  **{}m |** `[{}%]`\n➠ **Sisa kuota dyno bulan ini :**\n  •  **{}h**  **{}m |** `[{}%]`\n\n**Total Ruang Disk:**: `{}`\n**Terpakai**: `{}`\n**Kosong**: `{}`\n\n**📊 Penggunaan Data 📊**\n**Upload**: `{}`\n**Down**: `{}`\n\n**CPU**: `{}%`\n**RAM**: `{}%`\n**DISK**: `{}%`"
@@ -357,7 +357,7 @@ nightm_4: "Berhasil Menghapus Obrolan Saat Ini dari Mode Malam"
 nightm_5: "Ada yang Salah"
 
 # pmpermit
-pmperm_1: "Harap tunggu saya merespons atau Anda akan diblokir dan dilaporkan sebagai spam!!"
+pmperm_1: "Harap tunggu owner merespons atau Anda akan diblokir dan dilaporkan sebagai spam!!"
 pmperm_2: "Anda telah melakukan spamming pada pesan Boss saya."
 pmperm_3: "Balas pesan seseorang atau coba perintah ini secara pribadi."
 
