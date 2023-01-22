@@ -131,7 +131,7 @@ async def download(event):
 
 
 @ultroid_cmd(
-    pattern="ul( (.*)|$)",
+    pattern="colong( (.*)|$)",
 )
 async def _(event):
     msg = await event.eor(get_string("com_1"))
