@@ -195,7 +195,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @TeamUltroid"
+    help_ += "\n© @punyaceel"
     buttons = []
     if inline_pic():
         data = f"sndplug_{key}_{file}"
@@ -287,7 +287,7 @@ async def _(e):
     button = InButtons.copy()
     button.append(
         [
-            Button.inline("« Bᴀᴄᴋ", data="open"),
+            Button.inline("«", data="open"),
         ],
     )
     await e.edit(buttons=button, link_preview=False)
@@ -400,7 +400,7 @@ async def ibuild(e):
                             _pic,
                             title="Ultroid Op",
                             text=txt,
-                            description="@idoganzz1",
+                            description="@punyaceel",
                             buttons=btn,
                             link_preview=False,
                         )
